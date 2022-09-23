@@ -1138,7 +1138,7 @@ class Course(CanvasObject):
         :rtype: :class:`canvasapi.paginated_list.PaginatedList` of
             :class:`canvasapi.feature.Feature`
         """
-        response = self.requester.request(
+        response = self._requester.request(
             "GET",
             "courses/{}/features/enabled".format(self.id),
             _kwargs=combine_kwargs(**kwargs),
